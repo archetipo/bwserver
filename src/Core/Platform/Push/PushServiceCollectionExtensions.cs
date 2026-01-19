@@ -30,10 +30,10 @@ public static class PushServiceCollectionExtensions
 
         if (globalSettings.SelfHosted)
         {
-            if (globalSettings.Installation.Id == Guid.Empty)
-            {
-                throw new InvalidOperationException("Installation Id must be set for self-hosted installations.");
-            }
+           /// if (globalSettings.Installation.Id == Guid.Empty)
+           /// {
+           ///     throw new InvalidOperationException("Installation Id must be set for self-hosted installations.");
+           /// }
 
             if (CoreHelpers.SettingHasValue(globalSettings.PushRelayBaseUri) &&
                 CoreHelpers.SettingHasValue(globalSettings.Installation.Key))
